@@ -10,14 +10,12 @@ class ChunsRenamePlugin {
       compilation.chunkTemplate.hooks.renderManifest.tap("ChunkNamePlugin", (result, options) => {
         const chunk = options.chunk;
         const outputOptions = options.outputOptions;
-        const chunksToRename = Object.keys(this);
 
-        if (this.withEntry && chunk.hasEntryModule()) {
-          chunk.filenameTemplate = typeof this.withEntry === "boolean" ? outputOptions.filename : this.withEntry;
+        if (this.initialChunksWithEntry && chunk.hasEntryModule() && chunk.isOnlyInitial()) {
+          chunk.filenameTemplate = typeof this.initialChunksWithEntry === "boolean" ? outputOptions.filename : this.initialChunksWithEntry;
         }
-        if (this.async && !chunk.isOnlyInitial()) {
-          chunk.filenameTemplate = this.async;
-          console.log(chunk.filenameTemplate);
+        if (this.asyncChunks && !chunk.isOnlyInitial()) {
+          chunk.filenameTemplate = this.asyncChunks;
         }
         if (this.hasOwnProperty(chunk.name) && typeof this[chunk.name] === "string") {
           chunk.filenameTemplate = this[chunk.name];
