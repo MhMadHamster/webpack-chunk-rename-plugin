@@ -51,4 +51,5 @@ module.exports = {
 ```
 
 ## Motivation
-Currently if you want to move webpack runtime into the separate file you will use [`optimization.runtimeChunk`](https://webpack.js.org/plugins/split-chunks-plugin/#optimization-runtimechunk) option, you all of the chunks, which do not have runtime in them will use `output.chunkFilename` for the filename, event if it contains entry. See [issue](https://github.com/webpack/webpack/issues/6598).
+Currently if you want to move webpack runtime into the separate file you will use [`optimization.runtimeChunk`](https://webpack.js.org/plugins/split-chunks-plugin/#optimization-runtimechunk) option, you all of the chunks, which do not have runtime in them will use `output.chunkFilename` for the filename, event if it contains entry. See [issue](https://github.com/webpack/webpack/issues/6598).  
+There are a few plugins for chunk renaming, however i haven't found plugin that is compatible with webpack 4.
