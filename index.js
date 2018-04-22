@@ -1,4 +1,4 @@
-class ChunsRenamePlugin {
+class ChunksRenamePlugin {
   constructor(chunksToRename = {}) {
     Object.keys(chunksToRename).forEach(key => {
       this[key] = chunksToRename[key]
@@ -6,8 +6,8 @@ class ChunsRenamePlugin {
   }
 
   apply(compiler) {
-    compiler.hooks.compilation.tap("ChunkNamePlugin", (compilation, { normalModuleFactory }) => {
-      compilation.chunkTemplate.hooks.renderManifest.tap("ChunkNamePlugin", (result, options) => {
+    compiler.hooks.compilation.tap("ChunksRenamePlugin", (compilation, { normalModuleFactory }) => {
+      compilation.chunkTemplate.hooks.renderManifest.tap("ChunksRenamePlugin", (result, options) => {
         const chunk = options.chunk;
         const outputOptions = options.outputOptions;
 
@@ -25,4 +25,4 @@ class ChunsRenamePlugin {
   }
 }
 
-module.exports = ChunsRenamePlugin;
+module.exports = ChunksRenamePlugin;
