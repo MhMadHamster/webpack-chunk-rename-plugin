@@ -1,5 +1,5 @@
 class ChunsRenamePlugin {
-  constructor(chunksToRename) {
+  constructor(chunksToRename = {}) {
     Object.keys(chunksToRename).forEach(key => {
       this[key] = chunksToRename[key]
     });
