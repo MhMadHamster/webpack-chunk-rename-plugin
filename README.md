@@ -24,7 +24,7 @@ module.exports = {
 ```  
 Option|Type|Description
 --|--|--
-`initialChunksWithEntry`|`boolean\|string`||Rename all chunks which are satisfy the condition `chunk.hasEntryModule() && chunk.isOnlyInitial`. If `true` is passed then use `output.filename` option, if string is passed, use it as chunk name i.e. you can use all placeholder for chunk naming like `[hash]`,`[name]`,`[chunkhash]` etc.
+`initialChunksWithEntry`|`boolean\|string`|Rename all chunks which are satisfy the condition `chunk.hasEntryModule() && chunk.isOnlyInitial`. If `true` is passed then use `output.filename` option, if string is passed, use it as chunk name i.e. you can use all placeholder for chunk naming like `[hash]`,`[name]`,`[chunkhash]` etc.
 `asyncChunks`|`string`|Use provided string to rename all async chunks. Just like for previous option, standart placeholders could be used.
 `[chunkName]`|`string`|Use provided string to rename specific chunk.
 
