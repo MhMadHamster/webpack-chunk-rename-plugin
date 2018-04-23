@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/v/webpack-chunk-rename-plugin.svg?style=flat-square)](https://www.npmjs.com/package/webpack-chunk-rename-plugin)
+[![node](https://img.shields.io/node/v/webpack-chunk-rename-plugin.svg?style=flat-square)](https://www.npmjs.com/package/webpack-chunk-rename-plugin)
 # webpack-chunk-rename-plugin
 
 This plugin helps with chunk naming in webpack. **To use it you need at least webpack 4.1**  
