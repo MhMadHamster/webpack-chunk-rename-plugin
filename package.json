@@ -26,5 +26,8 @@
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-prettier": "2.6.0",
     "prettier": "1.12.1"
+  },
+  "scripts": {
+    "lint": "yarn && yarn eslint ."
   }
 }
